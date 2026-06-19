@@ -59,7 +59,7 @@ function createcard(thumbnail, time, title, chanalname, views, timeAgo) {
 
 
 createcard(
-    "/computer.jpg",
+    "computer.jpg",
     "12:33",
     "This is a website builder",
     "VR Gaming",
