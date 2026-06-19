@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dynamic card builder</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      padding: 35px 15px;
+      background:
+        radial-gradient(circle at top left, #ff006e33, transparent 25%),
+        radial-gradient(circle at bottom right, #00c3ff33, transparent 25%),
+        linear-gradient(135deg, #050505, #101010, #1b1b1b);
+      color: white;
+    }
+
+    .func {
+      width: 95%;
+      max-width: 1100px;
+      margin: auto;
+      margin-bottom: 35px;
+      padding: 20px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: 700;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #ff006e, #ff9500);
+      box-shadow:
+        0 0 20px rgba(255, 0, 110, .5),
+        0 0 45px rgba(255, 149, 0, .4);
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        transform: translateY(0);
+        box-shadow:
+          0 0 15px rgba(255, 0, 110, .4),
+          0 0 30px rgba(255, 149, 0, .3);
+      }
+
+      to {
+        transform: translateY(-2px);
+        box-shadow:
+          0 0 30px rgba(255, 0, 110, .7),
+          0 0 55px rgba(255, 149, 0, .6);
+      }
+    }
+
+    .container {
+      width: 95%;
+      max-width: 1100px;
+      margin: 22px auto;
+      display: flex;
+      gap: 22px;
+      padding: 18px;
+      border-radius: 24px;
+      background: rgba(20, 20, 20, .85);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, .08);
+      overflow: hidden;
+      position: relative;
+      transition: .4s ease;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg,
+          rgba(255, 0, 110, .15),
+          rgba(0, 195, 255, .15));
+      opacity: 0;
+      transition: .4s;
+    }
+
+    .container:hover::before {
+      opacity: 1;
+    }
+
+    .container:hover {
+      transform: translateY(-8px) scale(1.015);
+      box-shadow:
+        0 20px 40px rgba(0, 0, 0, .6),
+        0 0 25px rgba(255, 0, 110, .15);
+    }
+
+    .thumbnail {
+      position: relative;
+      min-width: 340px;
+      height: 195px;
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .thumbnail-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: .5s ease;
+    }
+
+    .container:hover .thumbnail-img {
+      transform: scale(1.08);
+    }
+
+    .thumbnail::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+          rgba(0, 0, 0, .5),
+          transparent);
+    }
+
+    .time {
+      position: absolute;
+      right: 12px;
+      bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, .85);
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      z-index: 2;
+      backdrop-filter: blur(5px);
+    }
+
+    .title-chanal {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 18px;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .title {
+      font-size: 25px;
+      line-height: 1.4;
+      font-weight: 800;
+      color: #fff;
+      transition: .3s;
+    }
+
+    .container:hover .title {
+      color: #ffffff;
+      text-shadow: 0 0 12px rgba(255, 255, 255, .35);
+    }
+
+    .chanal-views {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      font-size: 15px;
+      color: #bfbfbf;
+    }
+
+    .channel-name {
+      color: #00c3ff;
+      font-weight: 700;
+    }
+
+    .views {
+      color: #ffd166;
+      font-weight: 700;
+    }
+
+    .months {
+      color: #ff4d6d;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="func">Use this function in the console to add cards "createcard(thumbnail, time, title, chanalname, views, timeAgo)"
+  </div>
+  <script src="logic.js">
+  </script>
+
+</body>
+
+</html>
