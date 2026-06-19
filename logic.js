@@ -58,11 +58,4 @@ function createcard(thumbnail, time, title, chanalname, views, timeAgo) {
 }
 
 
-createcard(
-    "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    "12:33",
-    "This is a website builder",
-    "VR Gaming",
-    229000,
-    4
-)
+createcard('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr3soTvnGf32cBC_IgXvWlsiE8mEyI5ZZa939wkAhxqw&s=10', '20:25', 'this is a video', 'vivek', 8745132144, 4)
