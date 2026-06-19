@@ -59,3 +59,5 @@ function createcard(thumbnail, time, title, chanalname, views, timeAgo) {
 
 
 createcard('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr3soTvnGf32cBC_IgXvWlsiE8mEyI5ZZa939wkAhxqw&s=10', '20:25', 'this is a video', 'vivek', 8745132144, 4)
+
+createcard('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr3soTvnGf32cBC_IgXvWlsiE8mEyI5ZZa939wkAhxqw&s=10', '20:25', 'this is a video' , 'vivek' , 8745132144, 4 )
