@@ -59,11 +59,10 @@ function createcard(thumbnail, time, title, chanalname, views, timeAgo) {
 
 
 createcard(
-    "computer.jpg",
+    "https://images.unsplash.com/photo-1518770660439-4636190af475",
     "12:33",
     "This is a website builder",
     "VR Gaming",
     229000,
     4
 )
- 
